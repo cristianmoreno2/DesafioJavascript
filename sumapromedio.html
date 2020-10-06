@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <section class="container text-center pt-5">
+        <h1>Desafío Javascript</h1>
+        <a href="/index.html"><button class="btn btn-danger">Volver</button></a>
+        <a href="/sumapromedio.html"><button class="btn btn-primary">Repetir</button></a>
+      </section><br><br>
+    <h1 class="text-primary">Suma-Promedio</h1><hr><br>
+    <h2>Has ingresado los números: <span id="span1"></span></h2>
+    <h2>La Suma es: <span id="span2"></span></h2>
+    <h2>El promedio es: <span id="span3"></span></h2>
+
+    <script>
+        let num1 = +prompt("Ingrese el primer número")
+        let num2 = +prompt("Ingrese el segundo número")
+        let num3 = +prompt("Ingrese el tercer número")
+        let num4 = +prompt("Ingrese el cuarto número")
+        let num5 = +prompt("Ingrese el quinto número")
+        let suma = (num1+num2+num3+num4+num5)
+        let promedio = suma/5
+        console.log("La suma es: "+suma)
+        console.log("El promedio es: "+promedio)
+        let span1 = document.getElementById('span1').innerHTML = `${num1}, ${num2}, ${num3}, ${num4} y ${num5}`
+        let span2 = document.getElementById('span2').innerHTML = suma
+        let span3 = document.getElementById('span3').innerHTML = promedio
+
+    </script>
+</body>
+</html>

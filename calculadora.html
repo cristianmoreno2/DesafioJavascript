@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <section class="container text-center pt-5">
+        <h1>Desafío Javascript</h1>
+        <a href="/index.html"><button class="btn btn-danger">Volver</button></a>
+        <a href="/calculadora.html"><button class="btn btn-primary">Repetir</button></a>
+      </section><br><br>
+    <h1 class="text-primary">Suma de dos números</h1><hr><br>
+    <h2>Has ingresado los números: <span id="span1"></span></h2>
+    <h2>La suma es: <span id="span2"></span></h2>
+    <h2>La resta es: <span id="span3"></span></h2>
+    <h2>La multiplicación es: <span id="span4"></span></h2>
+    <h2>La división es: <span id="span5"></span></h2>
+    <h2>El módulo es: <span id="span6"></span></h2>
+
+    <script>
+        let num1 = +prompt("Ingrese el primer número")
+        let num2 = +prompt("Ingrese el segundo número")
+        let suma = num1+num2
+        let resta = num1-num2
+        let multiplicacion = num1*num2
+        let division = num1/num2
+        let modulo = num1%num2
+        if(num1&&num2>0){
+            console.log("la suma es " + suma)
+            console.log("la resta es " + resta)
+            console.log("la multiplicación es " + multiplicacion)
+            console.log("la división es " + division)
+            console.log("el módulo es " + modulo)
+        }else{
+            alert("Debes ingresar números iguales o mayores a 0")
+        }
+
+        let span1 = document.getElementById('span1').innerHTML = `${num1} y ${num2}`
+        let span2 = document.getElementById('span2').innerHTML = suma
+        let span3 = document.getElementById('span3').innerHTML = resta
+        let span4 = document.getElementById('span4').innerHTML = multiplicacion
+        let span5 = document.getElementById('span5').innerHTML = division
+        let span6 = document.getElementById('span6').innerHTML = modulo
+    </script>
+</body>
+</html>
